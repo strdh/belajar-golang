@@ -83,5 +83,19 @@ func main() {
 		fmt.Println("")
 	}
 
+	txt := "Programer"
+
+	for i := 0; i<len(txt); i++ {
+		for j, k := 0, len(txt) - 1; j<len(txt); j, k = j+1, k-1{
+			if j == i || (i == 0 || i == len(txt) - 1) {
+				fmt.Print(string(txt[j]))
+			} else if k == i {
+				fmt.Print(string(txt[k]))
+			} else {
+				fmt.Print(" ")
+			}
+		}
+		fmt.Println("")
+	}
 
 }
